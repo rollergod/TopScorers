@@ -1,0 +1,43 @@
+﻿@using MyProject_TopScorers.Domain.Models
+@*@model Root*@
+@model List<Datum>
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.League</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+	@for(int i= 0 ; i < 20 ; i++)
+	{
+
+		 @*<div class="card" style="width: 18rem; margin:10px;">
+			<img class="card-img-top" src="@Model.data[i].team.CrestUrl" alt="Card image cap">
+				<div class="card-body">
+				<h5 class="card-title">@Model.data[i].player.player_name</h5>
+				<p class="card-text">Игрок команды @Model.data[i].team.team_name</p>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">Забил на выезде: @Model.data[i].goals.away</li>
+				<li class="list-group-item">Забил дома: @Model.data[i].goals.home</li>
+				<li class="list-group-item">Всего: @Model.data[i].goals.overall</li>
+			</ul>
+		</div>*@
+
+		<div class="card" style="width: 18rem; margin:10px;">
+			<a asp-action="GetPlayer" asp-route-league=@ViewBag.League asp-route-name="@Model[i].player.player_name">
+				<img class="card-img-top" src="@Model[i].player.CrestUrl" alt="Card image cap">
+			</a>
+				<div class="card-body">
+					<h5 class="card-title">@Model[i].player.player_name</h5>
+					<p class="card-text">Игрок команды @Model[i].team.team_name</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Забил на выезде: @Model[i].goals.away</li>
+					<li class="list-group-item">Забил дома: @Model[i].goals.home</li>
+					<li class="list-group-item">Всего: @Model[i].goals.overall</li>
+				</ul>
+			
+		</div>
+	}
+</div>
