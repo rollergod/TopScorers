@@ -7,7 +7,7 @@ using TestApi.HttpClientTest;
 namespace Test
 {
     [TestClass]
-    public class UnitTest1
+    public class ApiTests
     {
         [TestMethod]
         public async Task Test_HttpClient()
