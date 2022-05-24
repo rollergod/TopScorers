@@ -42,18 +42,18 @@ namespace Test
             //Assert.AreEqual(258, test.data.Count);
         }
 
-        [TestMethod]
-        public async Task Test_RestClient_GetPicuter()
-        {
-            TopScorers top = new TopScorers();
+        //[TestMethod]
+        //public async Task Test_RestClient_GetPicuter()
+        //{
+        //    TopScorers top = new TopScorers();
 
-            var test = await top.GetTopScorersSeriaA();
-            var result = await top.GetPictures(test); 
+        //    var test = await top.GetTopScorersSeriaA();
+        //    var result = await top.GetPictures(test); 
 
 
-            Assert.AreEqual("https://s5o.ru/storage/simple/ru/edt/5e/b1/88/73/rue1fec74a657.jpg", result[0].team.CrestUrl.ToString());
-            //Assert.AreEqual(258, test.data.Count);
-        }
+        //    Assert.AreEqual("https://s5o.ru/storage/simple/ru/edt/5e/b1/88/73/rue1fec74a657.jpg", result[0].team.CrestUrl.ToString());
+        //    //Assert.AreEqual(258, test.data.Count);
+        //}
 
         //[TestMethod]
         //public async Task Test_HttpClient_GetPicuter()

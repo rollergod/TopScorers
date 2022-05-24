@@ -28,8 +28,12 @@
 	<p class="">Забил дома: @Model.infoPlayerSeason2122.goals.home</p>
 	<p class="">Всего: @Model.infoPlayerSeason2122.goals.overall</p>
     <h5 class="card-title">В прошлом сезоне</h5>
-    <p class="">Забил на выезде: @Model.infoPlayerSeason2021.goals.away</p>
-	<p class="">Забил дома: @Model.infoPlayerSeason2021.goals.home</p>
-	<p class="">Всего: @Model.infoPlayerSeason2021.goals.overall</p>
+        @if(Model.infoPlayerSeason2021 != null)
+        {
+            <p class="">Забил на выезде: @Model.infoPlayerSeason2021.goals.away</p>
+	        <p class="">Забил дома: @Model.infoPlayerSeason2021.goals.home</p>
+	        <p class="">Всего: @Model.infoPlayerSeason2021.goals.overall</p>
+        }
+        <p class="">Игрок проводил предыдущий сезон в другой лиге. Подробная информация отсутствует</p>
   </div>
 </div>
