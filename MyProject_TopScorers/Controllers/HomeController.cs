@@ -14,12 +14,10 @@ namespace MyProject_TopScorers.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private readonly ITopScorers _topScorers;
 
-        public HomeController(ILogger<HomeController> logger, ITopScorers topScorers)
+        public HomeController(ITopScorers topScorers)
         {
-            _logger = logger;
             _topScorers = topScorers;
         }
 
@@ -44,7 +42,6 @@ namespace MyProject_TopScorers.Controllers
             return View("Scorers", response);
         }
 
-        //[HttpGet("Player/{name}")]
         [Route("Player/{name}/{league}")]
         public async Task<IActionResult> GetPlayer(string name, Leagues league)
         {

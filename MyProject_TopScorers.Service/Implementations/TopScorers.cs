@@ -253,15 +253,6 @@ namespace MyProject_TopScorers.Service.Implementations
                 currentPlayer = Players.FirstOrDefault(data => data.player.player_name == playerName);
             return currentPlayer;
         }
-
-        //public async Task<Datum> GetPlayerById(int id)
-        //{
-        //    var currentPlayer = SeriaAPLayers.FirstOrDefault(data => data.player.player_id == id);
-
-        //    if (currentPlayer is null)
-        //        SeriaAPLayers.FirstOrDefault(data => data.player.player_id == id);
-
-        //    return currentPlayer;
-        //}
+        
     }
 }
